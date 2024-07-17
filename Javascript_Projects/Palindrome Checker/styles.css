@@ -1,0 +1,130 @@
+:root {
+    --light-grey: #f5f6f7;
+    --dark-blue: #0a0a23;
+    --fcc-blue: #1b1b32;
+    --light-yellow: #fecc4c;
+    --dark-yellow: #feac32;
+    --light-pink: #ffadad;
+    --dark-red: #850000;
+    --light-green: #acd157;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    background-color: var(--fcc-blue);
+    color: var(--light-grey);
+    margin: 0; /* Ensure no default margin */
+    padding: 0; /* Ensure no default padding */
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .content {
+    display: grid;
+    place-items: center;
+    margin: 8.5em auto; /* Adjust margin for responsiveness */
+    padding: 20px; /* Add specific padding instead of 'auto' */
+  }
+  
+  img {
+    max-width: 80px;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 25px;
+  }
+  
+  .border {
+    border: 3px solid var(--light-grey);
+    padding: 1.3px; /* Consider using '1.3px' or '1.3em' for consistent units */
+    border-radius: 20px;
+  }
+  
+  .input-container {
+    width: min(100vw, 400px); /* Responsive width up to 400px or full viewport width */
+    min-height: 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px; /* Adjust padding for responsiveness */
+    margin: 10px 0;
+    background-color: var(--light-grey);
+    box-shadow: 0 5px 6px var(--dark-yellow);
+    color: var(--fcc-blue);
+  }
+  
+  p {
+    text-align: center;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+  
+  label {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .palindrome-input {
+    height: 30px;
+    width: 100%; /* Full width within its container */
+    max-width: 230px; /* Limit maximum width */
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid var(--dark-yellow);
+  }
+  
+  .palindrome-btn {
+    width: 90px;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--dark-yellow);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .palindrome-btn:hover {
+    background-color: var(--dark-red);
+  }
+  
+  .results-div {
+    overflow-y: auto;
+    word-wrap: break-word;
+    min-height: 50px;
+  }
+  
+  .user-input {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 1px;
+    text-align: center;
+  }
+  
+  /* Media Query for responsiveness */
+  @media screen and (max-width: 600px) {
+    .content {
+      margin: 5em auto; /* Adjust margin for smaller screens */
+    }
+  
+    .input-container {
+      width: 90%; /* Adjust width for smaller screens */
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .palindrome-input {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
